@@ -3,7 +3,7 @@ An AI-powered inventory optimization knowledge assistant
 
 ## 📘 Project Overview
 
-IOKA is an AI-powered knowledge assistant designed to provide intelligent insights into inventory management and supply chain optimization. Leveraging advanced RAG (Retrieval-Augmented Generation) technology, it transforms complex inventory research into actionable recommendations.
+InventoryGPT is an AI-powered knowledge assistant designed to provide intelligent insights into inventory management and supply chain optimization. Leveraging advanced RAG (Retrieval-Augmented Generation) technology, it transforms complex inventory research into actionable recommendations.
 
 ## ✨ Key Features
 
