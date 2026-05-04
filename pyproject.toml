@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "inventorygpt"
+version = "0.1.0"
+description = "AI-powered inventory optimization knowledge assistant."
+requires-python = ">=3.9"
+dependencies = [
+    "langchain",
+    "langchain-core",
+    "langchain-community",
+    "pypdf",
+    "pymupdf",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
