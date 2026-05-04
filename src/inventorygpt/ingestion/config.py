@@ -1,28 +1,21 @@
-"""Configuration boilerplate for ingestion components."""
+"""Configuration objects for ingestion components."""
 
+from dataclasses import dataclass
+from pathlib import Path
 
+@dataclass
 class FileIngestionConfig:
-    """Configuration placeholder for file-based document ingestion."""
-
-    # Expected fields:
-    # - source_path
-    # - glob_patterns
-    # - supported_extensions
-    # - encoding
-
-    def __init__(self) -> None:
-        """Initialize file ingestion configuration."""
-        pass
+    """Configuration options to read file"""
+    source_path:Path
+    glob_patterns:tuple[str,...] = ("**/*.pdf")
+    supported_extensions: tuple[str, ...] = (".pdf", ".txt", ".md")
+    encoding: str = "utf-8"
 
 
+@dataclass
 class ChunkingConfig:
-    """Configuration placeholder for document chunking."""
+    """Options for splitting documents into retrievable chunks."""
 
-    # Expected fields:
-    # - chunk_size
-    # - chunk_overlap
-    # - separators
-
-    def __init__(self) -> None:
-        """Initialize chunking configuration."""
-        pass
+    chunk_size: int = 1000
+    chunk_overlap: int = 150
+    separators: tuple[str, ...] = ("\n\n", "\n", " ", "")
